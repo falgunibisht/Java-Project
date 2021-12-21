@@ -1,4 +1,4 @@
-package projectPackage;
+package com.pack;
 
 public class Palindrome {
 
@@ -6,7 +6,9 @@ public class Palindrome {
 		// TODO Auto-generated method stub
 
 		int num=121;
-		int n=num, rev=0, x=0;
+		int n=num;
+		int rev=0;
+		int x=0;
 		
 		while(n!=0)
 		{

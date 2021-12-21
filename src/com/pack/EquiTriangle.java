@@ -1,4 +1,4 @@
-package projectPackage;
+package com.pack;
 
 public class EquiTriangle {
 
