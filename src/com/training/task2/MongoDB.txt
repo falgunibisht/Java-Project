@@ -1,0 +1,13 @@
+db.createCollection(student_details)
+
+db.createCollection('student_details')
+
+db.student_details.insertMany([{"name":"Falguni","lang":"Java"},
+{"name":"Garima","lang":"Java"},
+{"name":"Prithvi","lang":"efef"},
+{"name":"ghhgh","lang":"erer"}])
+
+db.student_details.find()
+
+db.student_details.find().sort({name:1})
+

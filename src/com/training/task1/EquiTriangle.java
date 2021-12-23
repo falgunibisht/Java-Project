@@ -1,4 +1,4 @@
-package com.pack;
+package com.training.task1;
 
 public class EquiTriangle {
 
