@@ -26,16 +26,16 @@ class Student
 	}
 }
 
-class ComImpl implements Comparator<Student>
-{
-
-	@Override
-	public int compare(Student o1, Student o2) {
-		// TODO Auto-generated method stub
-		return o1.seqNum.compareTo(o2.seqNum);
-	}
-	
-}
+//class ComImpl implements Comparator<Student>
+//{
+//
+//	@Override
+//	public int compare(Student o1, Student o2) {
+//		// TODO Auto-generated method stub
+//		return o1.seqNum.compareTo(o2.seqNum);
+//	}
+//	
+//}
 
 public class MergeList {
 
@@ -59,9 +59,10 @@ public class MergeList {
 			System.out.println(arr.get(i));
 		}
 		
-		Comparator<Student> com = new ComImpl();
-		Collections.sort(arr, com);
+//		Comparator<Student> com = new ComImpl();
+//		Collections.sort(arr, com);
 		
+		arr.sort((Student o1, Student o2)->o1.seqNum.compareTo(o2.seqNum));
 		System.out.println("\nSorted List");
 		for(int i=0; i<arr.size(); i++)
 		{
