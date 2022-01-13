@@ -12,13 +12,13 @@ class PrintingOddEven implements Runnable
 	}
 
 	
-	public synchronized void run()
+	public void run()
 	{
 		for (int i=1; i<=5; i++)
 		{
 			//System.out.println(Thread.currentThread().getName()+" Inside loop");
 			synchronized (lock) {
-				//System.out.println(Thread.currentThread().getName()+" Inside critical section");
+				System.out.println(Thread.currentThread().getName()+" Inside critical section");
 				while(count%2 != flag)
 					try {
 						lock.wait();
