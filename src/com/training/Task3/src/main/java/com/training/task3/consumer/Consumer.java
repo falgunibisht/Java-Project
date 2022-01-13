@@ -35,8 +35,8 @@ public class Consumer {
 		
 		if (m.action.equals("Delete"))
 		{
-			System.out.println("Jere");
-			userService.deleteUser(m.userDto.getId());
+			//System.out.println("Jere");
+			userService.deleteUser(m.userDto);
 		}
 	}
 	

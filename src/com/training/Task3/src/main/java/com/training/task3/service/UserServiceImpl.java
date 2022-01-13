@@ -45,10 +45,10 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public void deleteUser(String id) {
+	public void deleteUser(UserDto u) {
 		// TODO Auto-generated method stub	
-		System.out.println("Here");
-	    dao.deleteById(id);
+		//System.out.println("Here");
+	    dao.deleteById(userConverter.dtoToEntity(u).getId());
 	}
 }
 

@@ -84,11 +84,17 @@ public class Controller {
 	}
 	
 	
-	@DeleteMapping("/deleteUser")
-	public ResponseEntity<HttpStatus> deleteUser(@RequestBody @Valid Message m) 
+	@DeleteMapping("/deleteUser/{id}")
+	public ResponseEntity<HttpStatus> deleteUser(@PathVariable String id) 
 	{
 		try {
 			logger.info("User Deleted");
+//			Message m=new Message();
+//			UserDto userDto=new UserDto();
+//			m.setAction("Delete");
+//			userDto.setId(id);
+//			m.userDto=userDto;
+//			kafkaTemplate.send(topic,m);
 			return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
