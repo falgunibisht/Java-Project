@@ -48,7 +48,7 @@ public class Controller {
 			try {
 				kafkaTemplate.send(topic, m);
 				logger.info("User Added");
-				return new ResponseEntity<UserDto>(HttpStatus.ACCEPTED);
+				return new ResponseEntity<UserDto>(m.userDto,HttpStatus.ACCEPTED);
 			} catch(Exception e) {
 				return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
 			}
